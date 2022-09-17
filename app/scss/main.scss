@@ -1,0 +1,104 @@
+.main {
+    position: relative;
+    box-sizing: border-box;
+    background: #F4F9FE;
+    padding-bottom: 62px;
+    &_back {
+        &_mob {
+            width: 100%;
+        }
+        &_desk {
+            display: none;
+        }
+    }
+    &_block {
+        margin-top: 30px;
+        & h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 38px;
+            line-height: 46px;
+            letter-spacing: -0.022em;
+            color: #000F61;
+        }
+        & p {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: -0.022em;
+            color: #5965A1;
+            margin-top: 14px;
+        }
+        &_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 48px;
+            background: #FB5779;
+            margin-top: 14px;
+            & span {
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.022em;
+                text-transform: uppercase;
+                color: #F4F9FE;
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        &_back {
+            &_mob {
+                display: none;
+            }
+            &_desk {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_back {
+            &_desk {
+                width: auto;
+                margin-left: auto;
+            }
+        }
+        &_block {
+            &_btn {
+                width: 200px;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        height: 592px;
+        display: flex;
+        align-items: center;
+        &_back {
+            &_desk {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+        }
+        &_block {
+            & h1 {
+                font-size: 56px;
+                line-height: 67px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 28px;
+                width: 573px;
+            }
+            &_btn {
+                margin-top: 28px;
+            }
+        }
+    }
+}
