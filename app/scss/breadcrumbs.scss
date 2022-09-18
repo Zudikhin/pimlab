@@ -1,0 +1,84 @@
+.breadcrumbs {
+    position: relative;
+    box-sizing: border-box;
+    height: 102px;
+    background: #F4F9FE;
+    display: flex;
+    align-items: center;
+    &_desk {
+        display: none;
+    }
+    &_mob {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    &_block {
+        & ul {
+            display: flex;
+            align-items: center;
+            & li {
+                margin-left: 4px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                & a {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: -0.022em;
+                    color: rgba(0, 15, 97, 0.5);
+                }
+                & span {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: -0.022em;
+                    color: #000F61;
+                }
+            }
+        }
+        & h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: -0.022em;
+            color: #000F61;
+        }
+    }
+    @media (min-width: 1200px) {
+        height: 160px;
+        align-items: flex-start;
+        &_mob {
+            display: none;
+        }
+        &_desk {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        &_block {
+            margin-top: 24px;
+            & ul {
+                & li {
+                    & a {
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                    & span {
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                }
+            }
+            & h3 {
+                font-size: 46px;
+                line-height: 55px;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.contact {
+    box-sizing: border-box;
+    padding: 47px 0px 60px 0px;
+    &_block {
+        display: flex;
+        flex-direction: column;
+        &_map {
+            order: 1;
+        }
+        &_text {
+            order: 2;
+            & h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 38px;
+                line-height: 46px;
+                letter-spacing: -0.022em;
+                color: #000F61;
+                margin-top: 44px;
+            }
+            &_list {
+                &_item {
+                    margin-top: 44px;
+                    & h5 {
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #FB5779;
+                    }
+                    & ul {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        & li {
+                            margin-right: 30px;
+                            margin-top: 10px;
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                            & a {
+                                font-family: 'Inter', sans-serif;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: -0.022em;
+                                color: #5965A1;
+                            }
+                        }
+                    }
+                    & p {
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: -0.022em;
+                        color: #5965A1;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 100px 0px;
+        &_block {
+            &_map {
+                order: 2;
+                margin-top: 35px;
+            }
+            &_text {
+                order: 1;
+                & h2 {
+                    font-size: 56px;
+                    line-height: 67px;
+                    margin-top: 0px;
+                }
+                &_list {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-top: 60px;
+                    &_item {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

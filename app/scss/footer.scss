@@ -45,6 +45,15 @@
                         letter-spacing: -0.022em;
                         color: #FFFFFF;
                         background: #FB5779;
+                        &::placeholder {
+                            color: #FFFFFF;
+                        }
+                        &:-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        &::-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
                     }
                 }
                 & input[type="submit"] {
@@ -122,13 +131,108 @@
 }
 
 
-// .footer {
-//     &_back {
-//         display: none;
-//     }
-//     &_block {
-//         & h4 {
-
-//         }
-//     }
-// }
+.footer {
+    background: #000F61;
+    box-sizing: border-box;
+    padding: 40px 0px;
+    &_block {
+        &_mob {
+            &_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &_logo {
+                    & img {
+                        width: 120px;
+                    }
+                }
+                &_social {
+                    display: flex;
+                    align-items: center;
+                    & a {
+                        margin-left: 30px;
+                    }
+                }
+            }
+            &_nav {
+                & ul {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    margin-top: 16px;
+                    & li {
+                        width: 50%;
+                        margin-top: 16px;
+                        & a {
+                            font-family: 'Inter', sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            letter-spacing: -0.022em;
+                            color: #F4F9FE;
+                        }
+                    }
+                }
+            }
+        }
+        &_desk {
+            display: none;
+        }
+    }
+    @media (min-width: 768px) {
+        &_block {
+            &_mob {
+                &_nav {
+                    & ul {
+                        & li {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            &_mob {
+                display: none;
+            }
+            &_desk {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &_main {
+                    display: flex;
+                    align-items: center;
+                    & nav {
+                        & ul {
+                            display: flex;
+                            align-items: center;
+                            & li {
+                                margin-left: 45px;
+                                & a {
+                                    font-family: 'Inter', sans-serif;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    letter-spacing: -0.022em;
+                                    color: #F4F9FE;
+                                }
+                            }
+                        }
+                    }
+                    &_social {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 100px;
+                        & a {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

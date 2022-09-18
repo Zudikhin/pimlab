@@ -1,7 +1,7 @@
-.project {
+.our_projects {
     box-sizing: border-box;
     position: relative;
-    padding-top: 64px;
+    padding-top: 42px;
     padding-bottom: 70px;
     &_block {
         &_title {
@@ -35,6 +35,9 @@
                 width: 100%;
                 margin-top: 30px;
                 position: relative;
+                &:first-child {
+                    margin-top: 0px;
+                }
                 &_img {
                     & img {
                         width: 100%;
@@ -115,26 +118,6 @@
             }
         }
     }
-    &_all {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 216px;
-        margin: 0 auto;
-        margin-top: 40px;
-        & span {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: -0.022em;
-            color: #FB5779;
-        }
-        &_arrow {
-            display: flex;
-            align-items: center;
-        }
-    }
     @media (min-width: 768px) {
         &_block {
             &_list {
@@ -149,7 +132,7 @@
         }
     }
     @media (min-width: 1200px) {
-        padding-top: 100px;
+        padding-top: 64px;
         padding-bottom: 112px;
         &_block {
             &_title {
@@ -169,10 +152,13 @@
                 position: relative;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 52px;
+                flex-wrap: wrap;
                 &_item {
-                    margin-top: 0px;
+                    margin-top: 18px;
                     width: calc(100%/3 - 12px);
+                    &:first-child {
+                        margin-top: 18px;
+                    }
                     &_img {
                         & img {
                             height: 296px;
@@ -186,14 +172,15 @@
                         flex-direction: column;
                         justify-content: center;
                     }
-                    &:nth-child(2) {
-                        & .project_block_list_item_img {
+                    &:nth-child(3n+2) {
+                        transform: translateY(1px);
+                        & .our_projects_block_list_item_img {
                             order: 2;
                         }
-                        & .project_block_list_item_text {
+                        & .our_projects_block_list_item_text {
                             order: 1;
                         }
-                        & .project_block_list_item_line {
+                        & .our_projects_block_list_item_line {
                             top: 0px;
                             bottom: auto;
                         }
@@ -236,5 +223,3 @@
         }
     }
 }
-
-

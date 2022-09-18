@@ -1,0 +1,85 @@
+.categories_nav {
+    margin-top: 20px;
+    &_block {
+        & ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            & li {
+                margin-right: 40px;
+                margin-top: 24px;
+                &:nth-child(3) {
+                    margin-right: 0px;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                & a {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.022em;
+                    text-transform: uppercase;
+                    color: #FB5779;
+                    position: relative;
+                    &.active {
+                        &::before {
+                            content: "";
+                            width: calc(100% + 17px);
+                            height: 1px;
+                            position: absolute;
+                            bottom: -3px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: #000F61;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        &_block {
+            & ul {
+                & li {
+                    &:nth-child(3) {
+                        margin-right: 40px;
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        margin-top: 88px;
+        &_block {
+            & ul {
+                & li {
+                    margin-top: 0px;
+                    margin-right: 94px;
+                    &:nth-child(3) {
+                        margin-right: 94px;
+                    }
+                }
+            }
+        }
+    }
+    &-news {
+        & .categories_nav_block {
+            & ul {
+                & li {
+                    & a {
+                        color: #1CCEF4;
+                    }
+                    &:nth-child(3) {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
