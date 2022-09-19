@@ -174,3 +174,24 @@ input:focus {
     max-width: 1312px;
   }
 }
+
+.btn_default {
+  transition: all 0.3s linear;
+}
+
+.btn_default:hover {
+  background: #FF94AA;
+  border: 1px solid #FF94AA;
+  transition: all 0.3s linear;
+}
+
+.btn_default span {
+  transition: all 0.3s linear;
+}
+
+.btn_default:hover span {
+  color: #FFFFFF;
+  transition: all 0.3s linear;
+}
+
+
